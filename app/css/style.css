@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans';
+}
+body{
+    
+}
+.container{
+    /* ширина выщатана */
+    width: 88%; 
+    margin: auto;
+}
+.container2{
+    width: 78%;
+    margin: auto;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 125px;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+.menu-item{
+    list-style: none;
+}
+.menu-item-link{
+    text-decoration: none;
+    font-weight: 700;
+    padding: 8px;
+    border-radius: 4px;
+    color: #5B5B5B;
+    transition: all 0.5s ease-in-out;
+}
+.menu-item-link:hover{
+    color: black;
+}
+.menu-active{
+    color: black;
+    background-color: #27DEBF;
+}
+.slogan{
+    /* vh - viewport height */
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+.slogan-inside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1{
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+#typed{
+    font-weight: 700;;
+}
+.throught{
+    font-weight: 700;
+}
+.slogan-p{
+    font-size: 25px;
+    color: #455A64;
+}
+.slogan-buttons{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+
+}
+.slogan-button-fill{
+    padding: 15px 40px;
+    font-size: 15px;
+    background-color: #27DEBF;
+    border-radius: 26px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    margin-right: 30px;
+}
+.slogan-button-link{
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+    font-size: 18px;
+}
