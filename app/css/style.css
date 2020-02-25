@@ -93,3 +93,8 @@ h1{
     color: black;
     font-size: 18px;
 }
+svg{
+    position: absolute;
+    z-index: -20;
+    transform: translate(278px, -5px);
+}
