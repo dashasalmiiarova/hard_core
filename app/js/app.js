@@ -239,5 +239,102 @@ var typed = new Typed('#typed', {
             this.destroy() // Num
         }
       })
+// Isotope-portfolio
+var iso = new Isotope( '.grid', {
+itemSelector: '.grid-item',
+layoutMode: 'fitRows',
+fitRows: {
+    gutter: 40
+    }
+    });
+var filterFns = {
+    numberGreaterThan50: function( itemElem ) {
+      var number = itemElem.querySelector('.number').textContent;
+      return parseInt( number, 10 ) > 50;
+    },
+    ium: function( itemElem ) {
+      var name = itemElem.querySelector('.name').textContent;
+      return name.match( /ium$/ );
+    }
+  };
+  var filtersElem = document.querySelector('.portfolio-filer');
+  filtersElem.addEventListener( 'click', function( event ) {
+    // only work with buttons
+    if ( !matchesSelector( event.target, 'button' ) ) {
+      return;
+    }
+    var filterValue = event.target.getAttribute('data-filter');
+    // use matching filter function
+    filterValue = filterFns[ filterValue ] || filterValue;
+    iso.arrange({ filter: filterValue });
+  });
 
-      
+  var buttonGroups = document.querySelectorAll('.portfolio-filer');
+  for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
+    var buttonGroup = buttonGroups[i];
+    radioButtonGroup( buttonGroup );
+  }
+  
+  function radioButtonGroup( buttonGroup ) {
+    buttonGroup.addEventListener( 'click', function( event ) {
+      // only work with buttons
+      if ( !matchesSelector( event.target, 'button' ) ) {
+        return;
+      }
+      buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
+      event.target.classList.add('is-checked');
+    });
+  }
+// Magnific Popup
+$('.grid-item').magnificPopup({
+  delegate: 'a', // child items selector, by clicking on it popup will open
+  type: 'image'
+  // other options
+  });
+$('#headerVideoLink').magnificPopup({
+    type:'inline',
+    midClick: true
+})
+//Add-Remove class
+// var portfolio_button = document.getElementById('portfolio-view-all');
+// portfolio_button.addEventListener('click', function(){
+//   var grid = document.getElementById('portfolio-iso');
+//   var hide = document.getElementById('portfolio-h');
+  
+// })
+//Max-height and css properties
+// var portfolioButton = document.getElementById('portfolio-view-all');
+// portfolioButton.addEventListener('click', function(){
+//   var panel = document.getElementById('portfolio-iso');
+//   var hide = document.getElementById('portfolio-h');
+//   // panel.style.maxHeight = '1120px';
+//   // hide.style.overflow = 'visible';
+// })
+
+var portfolioButton = document.getElementById('portfolio-view-all');
+var panel = document.getElementById('portfolio-iso');
+var hide = document.getElementById('portfolio-h');
+portfolioButton.addEventListener('click', function(){
+  if(portfolioButton.value == "View All"){
+    portfolioButton.value = "View Less";
+    panel.classList.remove('portfolio-grid');
+    hide.classList.remove('port-hidd');
+  } else{
+    portfolioButton.value = "View All";
+    panel.classList.add('portfolio-grid');
+    hide.classList.add('port-hidd');
+  }
+})
+// slick carousel
+
+  $('.first-testimonials-carousel').slick({
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false,
+    infinite: false,
+    fade: false,
+    cssEase: 'linear'
+  });

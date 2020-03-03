@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <title>HardCore</title>
 </head>
 <body>
@@ -33,9 +36,9 @@
                 <li class="menu-item">
                     <a href="" class="menu-item-link menu-active">Home</a></li>
                 <li class="menu-item">
-                    <a href="" class="menu-item-link">About Us</a></li>
+                    <a href="#aboutMe" class="menu-item-link">About Us</a></li>
                 <li class="menu-item">
-                    <a href="" class="menu-item-link">Services</a></li>
+                    <a href="#services" class="menu-item-link">Services</a></li>
                 <li class="menu-item">
                     <a  href="" class="menu-item-link">News</a></li>
                 <li class="menu-item">
@@ -45,7 +48,6 @@
     </header>
     <div class="contant">
         <div class="slogan">
-           
             <div class="slogan-inside container2">
                 <div class="slogan-inside-info">
                     <div class="typed-slogan" id="typed-strings">
@@ -53,7 +55,10 @@
                         <p class="slogan-p">clean design and advanced digital solutions</p>
                         <div class="slogan-buttons">
                             <a href="#" class="slogan-button-fill">Explore More</a>
-                            <a href="#" class="slogan-button-link">See Live Demo</a>
+                            <a href="#video-popup" id="headerVideoLink" class="slogan-button-link">See Live Demo</a>
+                        </div>
+                        <div id="video-popup" class="mfp-hide embed-responsive embed-responsive-21by9 videoPop">
+                            <iframe width="960" height="515" src="https://www.youtube.com/embed/Wo5uf4-WCdE?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -73,7 +78,7 @@
             <img data-depth="0.1" class="parallax-img-7 slogan-parallax-img" src="img/slogan-parallax/Ellipse 13.svg" alt="">
             <img data-depth="0.1" class="parallax-img-8 slogan-parallax-img" src="img/slogan-parallax/Ellipse 14.svg" alt="">
         </div>
-        <div class="about container3">
+        <div class="about container3" id="aboutMe">
             <div class="about-info-block">
                 <div class="about-img">
                     <div class="about-parallax1" id="about-img1">
@@ -150,7 +155,7 @@
             </div>
 
         </div>
-        <div class="services container2">
+        <div class="services container2" id="services">
             <div class="services-title">
                 <div class="h2-title">
                     <h2 class="h2-services">my services</h2>
@@ -260,7 +265,363 @@
                 </div>
             </div>
         </div>
+        <div class="portfolio container2">
+            <div class="services-title">
+                <div class="h2-title">
+                    <h2 class="h2-services">portfolio</h2>
+                    <div class="h2-services-line portfolio-line1"></div>
+                </div>
+                <div class="h3-title">
+                    <h3 class="h3-services" id="block2">My Work Examples</h3>
+                    <div class="h3-services-line portfolio-line2"></div>
+                </div>
+            </div>
+            <div class="portfolio-filer">
+                <button class="portfolio-filter-button is-checked" data-filter="*">All</button>
+                <button class="portfolio-filter-button" data-filter=".web-design">Web Design</button>
+                <button class="portfolio-filter-button" data-filter=".mobile-app">Mobile App</button>
+                <button class="portfolio-filter-button" data-filter=".ux-ui">UX/UI</button>
+            </div>
+            <div class="portfolio-hidden" >
+                <div class="portfolio-grid grid" id="portfolio-iso" data-ignore-hash="true">
+                    <div class="grid-item web-design">
+                    <div class="portfolio-bg-img pw1">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                <div class="portfolio-img">
+                                    <a class="portfolio-link" href="img/pw1.jpg"><img class="portfolio-plus" src="img/plus.svg" alt=""></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="grid-item mobile-app ux-ui">
+                    <div class="portfolio-bg-img pm1">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                <a class="portfolio-link" href="img/pm1.jpg"><img class="portfolio-plus" src="img/plus.svg"
+                                        alt=""></a></div>
+                            </div>
+                            
+                        </div>
+                        </div>
+                    <div class="grid-item web-design">
+                    <div class="portfolio-bg-img pw2">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                    <div class="portfolio-img">
+                                        <a class="portfolio-link" href="img/pw2.jpg"><img class="portfolio-plus" src="img/plus.svg"
+                                                    alt=""></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    <div class="grid-item mobile-app ux-ui">
+                    <div class="portfolio-bg-img pm2">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                    <a class="portfolio-link" href="img/pm2.png"><img class="portfolio-plus" src="img/plus.svg"
+                                                alt=""></a></div>
+                        </div>
+                     </div>
+                        </div>
+                    <div class="port-hidd port-norm" id="portfolio-h">
+                        <div class="grid-item web-design">
+                            <div class="portfolio-bg-img pw3">
+                            <div class="portfolio-bg-color">
+                             <div class="portfolio-info-button">
+                                 <div class="portfolio-title">Phone Mockup</div>
+                                 <a class="portfolio-link" href="img/pw3.jpg"><img class="portfolio-plus" src="img/plus.svg"
+                                         alt=""></a></div>
+                        
+                        </div>
+                    </div>
+                        </div>
+                        <div class="grid-item mobile-app">
+                    <div class="portfolio-bg-img pm3">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                <div class="portfolio-img">
+                                    <a class="portfolio-link" href="img/pm3.jpg"><img class="portfolio-plus" src="img/plus.svg"
+                                            alt=""></a></div>
+                            </div>
+                            
+                         </div>
+                        </div>
+                        </div>
+                        <div class="grid-item ux-ui">
+                    <div class="portfolio-bg-img pu1">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                <a class="portfolio-link" href="img/pu1.png"><img class="portfolio-plus" src="img/plus.svg"
+                                        alt=""></a></div>
+                        
+                        </div>
+                    </div>
+                        </div>
+                        <div class="grid-item web-design">
+                    <div class="portfolio-bg-img pw4">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                <a class="portfolio-link" href="img/pw4.jpg"><img class="portfolio-plus" src="img/plus.svg" alt=""></a></div>
+                            </div>
+                            
+                        </div>
+                        </div>
+                        <div class="grid-item mobile-app">
+                    <div class="portfolio-bg-img pm4">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                 <div class="portfolio-title">Phone Mockup</div>
+                                 <a class="portfolio-link" href="img/pm4.png"><img class="portfolio-plus" src="img/plus.svg"
+                                         alt=""></a></div>
+                            </div>
+                           
+                        </div>
+                        </div>
+                        <div class="grid-item ux-ui">
+                    <div class="portfolio-bg-img pu2">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                <div class="portfolio-img">
+                                    <a class="portfolio-link" href="img/pu2.png"><img class="portfolio-plus" src="img/plus.svg"
+                                            alt=""></a></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                        </div>
+                        <div class="grid-item web-design">
+                    <div class="portfolio-bg-img pw5">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                <a class="portfolio-link" href="img/pw5.png"><img class="portfolio-plus" src="img/plus.svg"
+                                        alt=""></a></div>
+                            </div>
+                            
+                        </div>
+                        </div>
+                        <div class="grid-item mobile-app">
+                    <div class="portfolio-bg-img pm5">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                <a class="portfolio-link" href="img/pm5.png"><img class="portfolio-plus" src="img/plus.svg" alt=""></a></div>
+                            </div>
+                            
+                        </div>
+                        </div>
+                        <div class="grid-item ux-ui">
+                    <div class="portfolio-bg-img pu3">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                 <div class="portfolio-title">Phone Mockup</div>
+                                 <a class="portfolio-link" href="img/pu3.jpg"><img class="portfolio-plus" src="img/plus.svg"
+                                         alt=""></a></div>
+                            </div>
+                           
+                        </div>
+                        </div>
+                        <div class="grid-item web-design">
+                    <div class="portfolio-bg-img pw6">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                <div class="portfolio-img">
+                                    <a class="portfolio-link" href="img/pw6.jpg"><img class="portfolio-plus" src="img/plus.svg"
+                                            alt=""></a></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                        </div>
+                        <div class="grid-item mobile-app">
+                    <div class="portfolio-bg-img pm6">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                <a class="portfolio-link" href="img/pm6.png"><img class="portfolio-plus" src="img/plus.svg"
+                                        alt=""></a></div>
+                            </div>
+                            
+                        </div>
+                        </div>
+                        <div class="grid-item ux-ui">
+                    <div class="portfolio-bg-img pu4">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                <a class="portfolio-link" href="img/pu4.png"><img class="portfolio-plus" src="img/plus.svg" alt=""></a></div>
+                            </div>
+                            
+                        </div>
+                        </div>
+                        <div class="grid-item web-design">
+                    <div class="portfolio-bg-img pw7">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                 <div class="portfolio-title">Phone Mockup</div>
+                                 <a class="portfolio-link" href="img/pw7.jpg"><img class="portfolio-plus" src="img/plus.svg"
+                                         alt=""></a></div>
+                            </div>
+                           
+                        </div>
+                        </div>
+                        <div class="grid-item mobile-app">
+                    <div class="portfolio-bg-img pm7">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                <div class="portfolio-img">
+                                    <a class="portfolio-link" href="img/pm7.jpg"><img class="portfolio-plus" src="img/plus.svg"
+                                            alt=""></a></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                        </div>
+                        <div class="grid-item ux-ui">
+                    <div class="portfolio-bg-img pu6">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                <a class="portfolio-link" href="img/pu6.jpg"><img class="portfolio-plus" src="img/plus.svg"
+                                        alt=""></a></div>
+                            </div>
+                            
+                        </div>
+                        </div>
+                        <div class="grid-item web-design">
+                    <div class="portfolio-bg-img pw8">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                <a class="portfolio-link" href="img/pw8.png"><img class="portfolio-plus" src="img/plus.svg" alt=""></a></div>
+                            </div>
+                            
+                        </div>
+                        </div>
+                        <div class="grid-item mobile-app">
+                    <div class="portfolio-bg-img pm8">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                 <div class="portfolio-title">Phone Mockup</div>
+                                 <a class="portfolio-link" href="img/pm8.jpg"><img class="portfolio-plus" src="img/plus.svg"
+                                         alt=""></a></div>
+                            </div>
+                           
+                        </div>
+                        </div>
+                        <div class="grid-item ux-ui">
+                    <div class="portfolio-bg-img pu7">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                <div class="portfolio-img">
+                                    <a class="portfolio-link" href="img/pu7.jpg"><img class="portfolio-plus" src="img/plus.svg"
+                                            alt=""></a></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                        </div>
+                        <div class="grid-item web-design">
+                    <div class="portfolio-bg-img pw9">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                <a class="portfolio-link" href="img/pw9.png"><img class="portfolio-plus" src="img/plus.svg"
+                                        alt=""></a></div>
+                            </div>
+                            
+                        </div>
+                        </div>
+                        <div class="grid-item mobile-app">
+                    <div class="portfolio-bg-img pm9">
+                        <div class="portfolio-bg-color">
+                            <div class="portfolio-info-button">
+                                <div class="portfolio-title">Phone Mockup</div>
+                                <a class="portfolio-link" href="img/pm9.jpg"><img class="portfolio-plus" src="img/plus.svg" alt=""></a></div>
+                            </div>
+                        </div>
+                        </div> 
+                    </div>
+                </div>
+
+                <input type="button" class="portfolio-view-all-b" id="portfolio-view-all" value="View All"></input>
+            </div>
+            
+        </div>
+        <div class="testimonials container2">
+            <div class="services-title">
+                <div class="h2-title">
+                    <h2 class="h2-services">testimonials</h2>
+                    <div class="h2-services-line testimonials-line1"></div>
+                </div>
+                <div class="h3-title">
+                    <h3 class="h3-services" id="block2">What People Says</h3>
+                    <div class="h3-services-line testimonials-line2"></div>
+                </div>
+                <div class="two-vertical-lines">
+                    <h4 class="testimonials-vertical-line">"</h4>
+                </div>
+            </div>
+            <div class="testimonials-carousel">
+                <div class="first-testimonials-carousel">
+                    <div class="slide-1" id="slide1">
+                        
+                        <div class="slider-info">
+                            <p class="testimonial-p">Lorem ipsum dolor sit amet,Stet clita kasd gubergren, no sea takimata sanctus est is the lorem ipsum dolor sit amet. sed diam nonumy eirmod tempor invidunt ut labore et dolore is the magna aliquyam.</p>
+                            <p class="testimonial-bold-p">John Doe</p>
+                            <p class="testimonial-p">CEO, ABC Company</p>
+                        </div>
+
+                        <!-- <img class="img-slick" src="img/slick1.jpg" alt=""> -->
+                    </div>
+                    <div class="slide-2" id="slide2">
+                        
+                        <div class="slider-info">
+                            <p class="testimonial-p">Lorem ipsum dolor sit amet,Stet clita kasd gubergren, no sea takimata sanctus est is the lorem ipsum dolor sit amet. sed diam nonumy eirmod tempor invidunt ut labore et dolore is the magna aliquyam.</p>
+                            <p class="testimonial-bold-p">Cris Angel</p>
+                            <p class="testimonial-p">Head Of CsWeb</p>
+                        </div>
+                        <!-- <img class="img-slick" src="img/slick2.jpg" alt=""> -->
+                    </div>
+                    <div class="slide-3" id="slide3">
+                        
+                        <div class="slider-info">
+                            <p class="testimonial-p">Lorem ipsum dolor sit amet,Stet clita kasd gubergren, no sea takimata sanctus est is the lorem ipsum dolor sit amet. sed diam nonumy eirmod tempor invidunt ut labore et dolore is the magna aliquyam.</p>
+                            <p class="testimonial-bold-p">Tracey Daniel</p>
+                            <p class="testimonial-p">ABC Company</p>
+                        </div>
+                        <!-- <img class="img-slick" src="img/slick3.jpg" alt="">  -->
+                    </div>
+                    
+                </div>
+                <div class="second-testimonials-carousel">
+                    <div class="slide-1">
+                        <img class="img-slick" src="img/slick3.jpg" alt="">
+                    </div>
+                    <div class="slide-2">
+                        <img class="img-slick" src="img/slick2.jpg" alt="">
+                    </div>
+                    <div class="slide-3">
+                        <img class="img-slick" src="img/slick3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
@@ -268,7 +629,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
     <script type="module" src="js/countUp.js"></script>
     <script src="js/progressbar.js"></script>
+    <script src="js/isotope.pkgd.js"></script>
+    <script src="js/layout-modes/fit-rows.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/slick.js"></script>
     <script type="module" src="js/app.js"></script>
-    
 </body>
 </html>
