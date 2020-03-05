@@ -36,6 +36,9 @@ var typed = new Typed('#typed', {
     var scene = document.getElementById('scene');
     var parallaxInstance = new Parallax(scene);
 
+    var sceneTestimonials = document.getElementById('scene-testimonials');
+    var parallaxInstanceTestimonials = new Parallax(sceneTestimonials);
+
     var sceneAbout1 = document.getElementById('about-img1');
     var parallaxInstanceAbout1 = new Parallax(sceneAbout1);
 
@@ -86,6 +89,30 @@ var typed = new Typed('#typed', {
         },
         {
             value: bloba
+        }
+        ]
+    });
+
+    const blobt = "M46.9,-63.4C59.8,-55.3,68.4,-40.1,102.8,-14.5C137.3,11.2,197.5,47.5,190.2,59.3C183,71.2,108.2,58.7,65.3,74.2C22.3,89.7,11.2,133.4,-16.4,155.9C-43.9,178.4,-87.8,179.8,-97,153.3C-106.2,126.8,-80.7,72.4,-94.4,30.6C-108.1,-11.2,-161,-40.4,-161.7,-57C-162.4,-73.6,-110.9,-77.7,-75.2,-78.4C-39.6,-79.1,-19.8,-76.6,-1.4,-74.7C17,-72.8,34.1,-71.6,46.9,-63.4Z";
+    const blobw = "M102.6,-123.4C128.5,-122.5,141.8,-86.4,165,-46.2C188.3,-6,221.6,38.4,205.5,60.2C189.3,81.9,123.8,81,81.3,87.5C38.8,94.1,19.4,108,6.7,98.9C-6.1,89.7,-12.1,57.4,-44.6,47.6C-77.1,37.8,-136.1,50.6,-179.8,31.2C-223.5,11.8,-252,-39.7,-220.6,-51.7C-189.2,-63.7,-97.8,-36.3,-51.1,-30.5C-4.3,-24.6,-2.2,-40.3,18.1,-65.2C38.4,-90.2,76.8,-124.4,102.6,-123.4Z";
+    const blobr = "M70.3,-117.1C95.2,-78.7,122.3,-63.6,135.2,-40.1C148,-16.6,146.8,15.3,148.4,60C150.1,104.6,154.7,161.9,130.4,167.2C106.2,172.5,53.1,125.7,2.5,122.2C-48,118.7,-96,158.5,-123.7,154.3C-151.5,150.2,-159,102.1,-175.2,56C-191.5,9.9,-216.5,-34.3,-188.8,-43.3C-161,-52.3,-80.5,-26.2,-40.3,-59.6C0,-93,0,-186,11.4,-201.6C22.7,-217.3,45.5,-155.6,70.3,-117.1Z";
+
+    const blobTId = document.querySelector("#blobtId");
+    const timelinet = anime.timeline({
+    loop: true,
+    duration: 50000,
+    easing: "linear"
+    });
+    timelinet.add({
+    targets: ".blobaClass",
+    d: [{
+            value: blobw
+        },
+        {
+            value: blobr
+        },
+        {
+            value: blobt
         }
         ]
     });
@@ -295,22 +322,6 @@ $('#headerVideoLink').magnificPopup({
     type:'inline',
     midClick: true
 })
-//Add-Remove class
-// var portfolio_button = document.getElementById('portfolio-view-all');
-// portfolio_button.addEventListener('click', function(){
-//   var grid = document.getElementById('portfolio-iso');
-//   var hide = document.getElementById('portfolio-h');
-  
-// })
-//Max-height and css properties
-// var portfolioButton = document.getElementById('portfolio-view-all');
-// portfolioButton.addEventListener('click', function(){
-//   var panel = document.getElementById('portfolio-iso');
-//   var hide = document.getElementById('portfolio-h');
-//   // panel.style.maxHeight = '1120px';
-//   // hide.style.overflow = 'visible';
-// })
-
 var portfolioButton = document.getElementById('portfolio-view-all');
 var panel = document.getElementById('portfolio-iso');
 var hide = document.getElementById('portfolio-h');
@@ -326,7 +337,6 @@ portfolioButton.addEventListener('click', function(){
   }
 })
 // slick carousel
-
   $('.first-testimonials-carousel').slick({
     dots: true,
     slidesToShow: 1,
@@ -336,5 +346,95 @@ portfolioButton.addEventListener('click', function(){
     arrows: false,
     infinite: false,
     fade: false,
-    cssEase: 'linear'
-  });
+    cssEase: 'linear',
+    // asNavFor: '.second-testimonials-carousel'
+});
+// $('.second-testimonials-carousel').slick({
+//   centerMode: true,
+//   centerPadding: "60px",
+//   // variableWidth: true,
+//   adaptiveHeight: false,
+//   dots: false,
+//   slidesToShow: 3, 
+//   slidesToScroll: 1,
+//   infinite: true,
+//   arrows: false,
+//   focusOnSelect: true,
+// });
+
+var slide1 = document.getElementById('slick-slide00');
+var slide2 = document.getElementById('slick-slide01');
+var slide3 = document.getElementById('slick-slide02');
+var img1 = document.getElementById('slide1');
+var img2 = document.getElementById('slide2');
+var img3 = document.getElementById('slide3');
+
+function functionslide1() {
+      img1.classList.add('active');
+      // img1.classList.remove('img-slick1');
+      if(img2.classList == 'img-slick2 active'){
+        img2.classList.remove('active');
+      }
+      if(img3.classList == 'img-slick3 active'){
+        img3.classList.remove('active');
+      }
+}
+function functionslide1else(){
+  if(img1.classList == 'active'){
+    img1.classList.remove('active');
+    img1.classList.add('img-slick3');
+  }
+}
+function functionslide2() {
+      img2.classList.add('active');
+      img2.classList.remove('img-slick2');
+      if(img1.classList == 'img-slick1 active'){
+        img1.classList.remove('active');
+      }
+      if(img3.classList == 'img-slick3 active'){
+        img3.classList.remove('active');
+      }
+}
+function functionslide2else(){
+  if(img2.classList == 'active'){
+    img2.classList.remove('active');
+    img2.classList.add('img-slick2');
+  }
+}
+function functionslide3() {
+      img3.classList.add('active');
+      img3.classList.remove('img-slick3');
+      if(img1.classList == 'img-slick1 active'){
+        img1.classList.remove('active');
+      }
+      if(img2.classList == 'img-slick2 active'){
+        img2.classList.remove('active');
+      }
+}
+function functionslide3else(){
+  if(img3.classList == 'active'){
+    img3.classList.remove('active');
+    img3.classList.add('img-slick3');
+  }
+}
+$('.first-testimonials-carousel').on('afterChange', function(){
+  if(slide1.classList == 'slick-slide slick-current slick-active'){
+    functionslide1();
+  }
+  else{
+    functionslide1else();
+  }
+  if(slide2.classList == 'slick-slide slick-current slick-active'){
+    // alert('Im here');
+    functionslide2();
+  }
+  else{
+    functionslide2else();
+  }
+  if(slide3.classList == 'slick-slide slick-current slick-active'){
+    functionslide3();
+  }
+  else{
+    functionslide3else();
+  }
+})

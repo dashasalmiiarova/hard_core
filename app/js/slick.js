@@ -56,6 +56,7 @@
                 },
                 dots: false,
                 dotsClass: 'slick-dots',
+                dotsId: 'slick-dots',
                 draggable: true,
                 easing: 'linear',
                 edgeFriction: 0.35,
