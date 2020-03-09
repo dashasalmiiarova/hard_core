@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css' rel='stylesheet' />
     <title>HardCore</title>
 </head>
 <body>
@@ -29,7 +31,7 @@
                 fill="#ffffff00" stroke="#27dbef" stoke-width="2px" />
         </g>
     </svg>
-    <header>
+    <header id="home">
         <div class="navbar container">
             <img src="img/logo.svg" class="logo" alt="HardCore">
             <ul class="menu">
@@ -46,7 +48,7 @@
             </ul>
         </div>
     </header>
-    <div class="contant">
+    <div  class="contant">
         <div class="slogan">
             <div class="slogan-inside container2">
                 <div class="slogan-inside-info">
@@ -576,14 +578,14 @@
             </div>
             <div class="testimonials-carousel">
                 <div class="first-testimonials-carousel">
-                    <div class="slide-1" id="slide-1">
+                    <div class="slide-1 slide-div" id="slide-1">
                         <div class="slider-info">
                             <p class="testimonial-p">Lorem ipsum dolor sit amet,Stet clita kasd gubergren, no sea takimata sanctus est is the lorem ipsum dolor sit amet. sed diam nonumy eirmod tempor invidunt ut labore et dolore is the magna aliquyam.</p>
                             <p class="testimonial-bold-p">John Doe</p>
                             <p class="testimonial-p">CEO, ABC Company</p>
                         </div>
                     </div>
-                    <div class="slide-2" id="slide-2">
+                    <div class="slide-2 slide-div" id="slide-2">
                         <div class="slider-info">
                             <p class="testimonial-p">Lorem ipsum dolor sit amet,Stet clita kasd gubergren, no sea takimata sanctus est is the lorem ipsum dolor sit amet. sed diam nonumy eirmod tempor invidunt ut labore et dolore is the magna aliquyam.</p>
                             <p class="testimonial-bold-p">Cris Angel</p>
@@ -591,7 +593,29 @@
                         </div>
                         <!-- <img class="img-slick" src="img/slick2.jpg" alt=""> -->
                     </div>
-                    <div class="slide-3" id="slide-3">
+                    <div class="slide-3 slide-div" id="slide-3">
+                        <div class="slider-info">
+                            <p class="testimonial-p">Lorem ipsum dolor sit amet,Stet clita kasd gubergren, no sea takimata sanctus est is the lorem ipsum dolor sit amet. sed diam nonumy eirmod tempor invidunt ut labore et dolore is the magna aliquyam.</p>
+                            <p class="testimonial-bold-p">Tracey Daniel</p>
+                            <p class="testimonial-p">ABC Company</p>
+                        </div>
+                    </div>
+                    <div class="slide-1 slide-div" id="slide-1">
+                        <div class="slider-info">
+                            <p class="testimonial-p">Lorem ipsum dolor sit amet,Stet clita kasd gubergren, no sea takimata sanctus est is the lorem ipsum dolor sit amet. sed diam nonumy eirmod tempor invidunt ut labore et dolore is the magna aliquyam.</p>
+                            <p class="testimonial-bold-p">John Doe</p>
+                            <p class="testimonial-p">CEO, ABC Company</p>
+                        </div>
+                    </div>
+                    <div class="slide-2 slide-div" id="slide-2">
+                        <div class="slider-info">
+                            <p class="testimonial-p">Lorem ipsum dolor sit amet,Stet clita kasd gubergren, no sea takimata sanctus est is the lorem ipsum dolor sit amet. sed diam nonumy eirmod tempor invidunt ut labore et dolore is the magna aliquyam.</p>
+                            <p class="testimonial-bold-p">Cris Angel</p>
+                            <p class="testimonial-p">Head Of CsWeb</p>
+                        </div>
+                        <!-- <img class="img-slick" src="img/slick2.jpg" alt=""> -->
+                    </div>
+                    <div class="slide-3 slide-div" id="slide-3">
                         <div class="slider-info">
                             <p class="testimonial-p">Lorem ipsum dolor sit amet,Stet clita kasd gubergren, no sea takimata sanctus est is the lorem ipsum dolor sit amet. sed diam nonumy eirmod tempor invidunt ut labore et dolore is the magna aliquyam.</p>
                             <p class="testimonial-bold-p">Tracey Daniel</p>
@@ -600,13 +624,22 @@
                     </div>
                 </div>
                 <div class="second-testimonials-carousel" id="second-slider">
-                    <div class="slide-1" id="slide-img1">
+                    <div class="slide-1-img" id="slide-img1">
                         <img class="img-slick1" id="slide1" src="img/slick_1.jpg" alt="">
                     </div>
-                    <div class="slide-2" id="slide-img2">
+                    <div class="slide-2-img" id="slide-img2">
                         <img class="img-slick2" id="slide2" src="img/slick2.jpg" alt="">
                     </div>
-                    <div class="slide-3" id="slide-img3">
+                    <div class="slide-3-img" id="slide-img3">
+                        <img class="img-slick3" id="slide3" src="img/slick3.jpg" alt="">
+                    </div>
+                    <div class="slide-1-img" id="slide-img1">
+                        <img class="img-slick1" id="slide1" src="img/slick_1.jpg" alt="">
+                    </div>
+                    <div class="slide-2-img" id="slide-img2">
+                        <img class="img-slick2" id="slide2" src="img/slick2.jpg" alt="">
+                    </div>
+                    <div class="slide-3-img" id="slide-img3">
                         <img class="img-slick3" id="slide3" src="img/slick3.jpg" alt="">
                     </div>
                 </div>
@@ -626,7 +659,10 @@
                 </g>
             </svg>
         </div>
-        <div class="blog container2">
+        <div class="blog container2">      
+        <svg width="801" height="1001" id="blobBlog" viewBox="0 0 801 1001" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="blob-blog" d="M460.456 4.39777C266.922 -31.2823 25.1106 210.546 13.1983 228.904C1.28605 247.262 -3.57516 300.051 5.25682 342.496C29.6054 459.511 150.219 452.981 223.29 544.437C261.99 592.874 309.549 613.02 312.814 676.387C316.352 745.064 215.596 756.489 223.29 824.783C229.82 882.739 268.214 906.027 312.814 940.288C384.443 995.313 449.246 1015.24 534.457 990.008C590.528 973.406 615.896 944.656 658.996 903.189C843.478 725.696 826.591 474.145 729.027 231.199C707.181 176.8 697.5 142.035 658.996 99.2489C600.305 34.0291 544.249 19.846 460.456 4.39777Z" fill="#FFE7CC"/>
+        </svg>
             <div class="services-title blog-title">
                 <div class="h2-title">
                     <h2 class="h2-services">blog</h2>
@@ -644,7 +680,10 @@
                     </div>
                     <div class="item-info">
                         <h4 class="item-h4">26th October</h4>
-                        <p class="item-p">I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
+                        <div class="p-blog">
+                            <p class="item-p" id="blog-p-1"> enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
+                        </div>
+                        
                         <div class="services-info-lines services-line-block1">
                             <div class="services-lines"></div>
                             <div class="services-lines"></div>
@@ -655,13 +694,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="blog-item2">
+                <div class="blog-item1">
                     <div class="item-img">
                         <img class="img-blog" src="img/blog2.png" alt="">
                     </div>
                     <div class="item-info">
                         <h4 class="item-h4">26th October</h4>
-                        <p class="item-p">I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
+                        <div class="p-blog">
+                           <p class="item-p" id="blog-p-2">I enjoy turning complex problems into simple, beautiful and intuitive designs.</p> 
+                        </div>
+                        
                         <div class="services-info-lines services-line-block1">
                             <div class="services-lines"></div>
                             <div class="services-lines"></div>
@@ -672,13 +714,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="blog-item3">
+                <div class="blog-item1">
                     <div class="item-img">
                         <img class="img-blog" src="img/blog3.png" alt="">
                     </div>
                     <div class="item-info">
                         <h4 class="item-h4">26th October</h4>
-                        <p class="item-p">I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
+                        <div class="p-blog">
+                            <p class="item-p" id="blog-p-3">I enjoy turning complex problems into simple, beautiful and intuitive designs. </p>
+                        </div>
+                        
                         <div class="services-info-lines services-line-block1">
                             <div class="services-lines"></div>
                             <div class="services-lines"></div>
@@ -690,8 +735,108 @@
                     </div>
                 </div>
             </div>
+            <div class="blog-button">
+                <input type="button" class="portfolio-view-all-b" id="blog-view-all" value="View All"></input>
+            </div>
+        </div>
+        <ul id="arrow-up" class="arrowUp">
+            <li>
+                <a href="#home" class="sticky-arrow-up"><i class="fas fa-arrow-up sticky-arrow-up-img"></i></a>
+            </li>
+        </ul>
+        <div class="contact container2">
+            <div class="contact-title">
+                <div class="h2-title">
+                    <h2 class="h2-contact">contact me</h2>
+                    <div class="h2-services-line h2-contact-line"></div>
+                </div>
+                <div class="h3-title">
+                    <h3 class="h3-services h3-contact">Send Us a Message</h3>
+                    <div class="h3-services-line h3-contact-line"></div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <div class="form-line">
+                        <input class="input-text" type="text" name="first_last_name" placeholder="Name" required>
+                        <input class="input-text" type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-line">
+                        <input class="input-text" type="tel" name="phone" placeholder="Phone">
+                        <select class="input-text select-text"  name="budget" id="">
+                            <option value="" disabled selected>Budget</option>
+                            <option value="500$">500$</option>
+                            <option value="1000$">1000$</option>
+                            <option value="1500$">1500$</option>
+                            <option value="2000$">2000$</option>
+                            <option value="2500$">2500$</option>
+                            <option value="3000$">3000$</option>
+                            <option value="3500$">3500$</option>
+                            <option value="4000$">4000$</option>
+                            <option value="4500$">4500$</option>
+                            <option value="more">More</option>
+                        </select>
+                    </div>
+                    <textarea name="message" placeholder="Message"></textarea>
+                    <div class="button-submit">
+                        <button class="button-form-submit portfolio-view-all-b">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id='map' style='width:100%; height: 400px;'>        
         </div>
     </div>
+
+    <footer class="container2">
+        <div class="footer-main-info">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <a href="#"><img src="img/logo.svg" class="logo" alt="HardCore"></a>
+                </div>
+                <div class="footer-logo-description">   
+                    <p class="services-info-p">Lorem ipsum dolor sit amet,Stet clita kasd gubergren, no sea takimata</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-info">
+                    <p class="item-p-bold footer-p">We are digital designer living in United States. <br> Apart from eating burger</p>
+                </div>
+                <div class="footer-links">
+                    <div class="sent-mail">
+                        <div class="footer-title">
+                            <h4 class="footer-title">sent mail</h4>
+                        </div>
+                        <div class="footer-link">
+                            <a class="services-info-p footer-link-small" href="mailto:dashasalmiiarova@gmail.com">info@portfolio.com</a>
+                        </div>
+                    </div>
+                    <div class="calls">
+                        <div class="footer-title">
+                            <h4 class="footer-title">make call</h4>
+                        </div>
+                        <a class="services-info-p footer-link-small" href="tel:1234567890">+123 456 7890</a>
+                    </div>
+                    <div class="get-in-touch">
+                        <div class="footer-title">
+                            <h4 class="footer-title">get in touch</h4>
+                        </div>
+                        <a class="services-info-p footer-link-small" href="">123/A, Hamburger City <br> New York, USA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-rights">
+            <p class="services-info-p footer-info-rights">2020 All Rights Reserved</p> 
+        </div>
+        <div id="scene-footer">
+            <img data-depth="0.3" class="footer-parallax-1" src="img/slogan-parallax/Ellipse 5.svg" alt="">
+            <img data-depth="0.3" src="img/slogan-parallax/Ellipse 12.svg" alt="" class="footer-parallax-2">
+            <img data-depth="0.3"  src="img/slogan-parallax/Ellipse 6.svg" alt="" class="footer-parallax-3">
+            <img data-depth="0.3"  src="img/slogan-parallax/Ellipse 8.svg" alt="" class="footer-parallax-4">
+            <img data-depth="0.3"  src="img/slogan-parallax/Ellipse 6.svg" alt="" class="footer-parallax-5">
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/anime.min.js"></script>
@@ -705,6 +850,8 @@
     <script src="js/layout-modes/fit-rows.js"></script>
     <script src="js/jquery.magnific-popup.js"></script>
     <script src="js/slick.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js'></script>
+    <!-- <script src='https://api.mapbox.com/uploads/pk.eyJ1IjoiZGFzaGFzYWxtaWlhcm92YSIsImEiOiJjazdrOXFuaTUwMnV3M3RvZG9tejVzcml3In0.vDTPEyo5-GciImjhY2Olug'></script> -->
     <script type="module" src="js/app.js"></script>
 </body>
 </html>

@@ -39,6 +39,9 @@ var typed = new Typed('#typed', {
     var sceneTestimonials = document.getElementById('scene-testimonials');
     var parallaxInstanceTestimonials = new Parallax(sceneTestimonials);
 
+    var sceneFooter = document.getElementById('scene-footer');
+    var parallaxInstanceFooter = new Parallax(sceneFooter);
+
     var sceneAbout1 = document.getElementById('about-img1');
     var parallaxInstanceAbout1 = new Parallax(sceneAbout1);
 
@@ -113,6 +116,30 @@ var typed = new Typed('#typed', {
         },
         {
             value: blobt
+        }
+        ]
+    });
+
+    const blobb1 = "M456.07 6.00474C209.376 -30.26 37.3429 133.509 22.1584 152.168C6.97401 170.827 -6.12455 231.478 5.13345 274.618C36.1702 393.551 -5.39642 415.438 87.7462 508.393C137.076 557.624 197.699 578.1 201.861 642.506C206.371 712.308 175.385 689.006 149.617 763.254C129.86 820.181 92.7665 944.177 149.617 979C240.922 1034.93 367.239 968.492 475.856 942.848C547.329 925.974 562.64 908.415 617.579 866.268C852.735 685.867 835.811 444.577 711.447 197.649C683.601 142.359 692.215 138.123 643.134 94.6356C566.964 27.1445 562.88 21.7061 456.07 6.00474Z";
+    const blobb2 = "M456.07 6.00474C209.376 -30.26 37.3429 133.509 22.1584 152.168C6.97401 170.827 -6.12455 231.478 5.13345 274.618C36.1702 393.551 -5.39642 415.438 87.7462 508.393C137.076 557.624 197.699 578.1 201.861 642.506C206.371 712.308 175.385 689.006 149.617 763.254C129.86 820.181 92.7665 944.177 149.617 979C240.922 1034.93 367.239 968.492 475.856 942.848C547.329 925.974 562.64 908.415 617.579 866.268C852.735 685.867 835.811 444.577 711.447 197.649C683.601 142.359 692.215 138.123 643.134 94.6356C566.964 27.1445 562.88 21.7061 456.07 6.00474Z";
+    const blobb3 = "M490.828 5.45142C246.735 -29.2092 59.6704 148.121 44.646 165.955C29.6217 183.789 -8.83541 259.591 2.3039 300.823C33.0134 414.494 87.496 407.548 179.657 496.391C228.467 543.445 199.565 557.531 179.657 617C156.647 685.734 124.634 743.113 134.338 809.456C142.573 865.756 123.405 954.511 179.657 987.793C269.999 1041.25 445.276 916.446 552.748 891.937C623.467 875.809 708.825 823.556 729.189 765.986C824.555 496.391 808.164 496.391 771.286 234.318C763.258 177.264 777.752 105.487 729.189 63.9232C655.165 0.566842 596.513 20.4583 490.828 5.45142Z";
+
+    const blobBId = document.querySelector("#blobBlog");
+    const timelineBlog = anime.timeline({
+    loop: true,
+    duration: 50000,
+    easing: "linear"
+    });
+    timelineBlog.add({
+    targets: ".blob-blog",
+    d: [{
+            value: blobb2
+        },
+        {
+            value: blobb3
+        },
+        {
+            value: blobb1
         }
         ]
     });
@@ -337,104 +364,151 @@ portfolioButton.addEventListener('click', function(){
   }
 })
 // slick carousel
-  $('.first-testimonials-carousel').slick({
-    dots: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    arrows: false,
-    infinite: false,
-    fade: false,
-    cssEase: 'linear',
-    // asNavFor: '.second-testimonials-carousel'
-});
+//   $('.first-testimonials-carousel').slick({
+//     dots: true,
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     autoplay: true,
+//     autoplaySpeed: 4000,
+//     arrows: false,
+//     infinite: false,
+//     fade: false,
+//     cssEase: 'linear',
+//     asNavFor: '.second-testimonials-carousel'
+// });
 // $('.second-testimonials-carousel').slick({
-//   centerMode: true,
-//   centerPadding: "60px",
-//   // variableWidth: true,
-//   adaptiveHeight: false,
 //   dots: false,
 //   slidesToShow: 3, 
 //   slidesToScroll: 1,
+//   asNavFor: '.first-testimonials-carousel',
 //   infinite: true,
 //   arrows: false,
-//   focusOnSelect: true,
+//   centerMode: true,
+//   focusOnSelect: true
 // });
+$('.first-testimonials-carousel').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  dots: true,
+  arrows: false,
+  fade: true,
+  asNavFor: '.second-testimonials-carousel'
+});
+$('.second-testimonials-carousel').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.first-testimonials-carousel',
+  arrows: false,
+  centerMode: true,
+  centerPadding: '0px',
+  focusOnSelect: true
+});
+// Map
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGFzaGFzYWxtaWlhcm92YSIsImEiOiJjazdrOXFuaTUwMnV3M3RvZG9tejVzcml3In0.vDTPEyo5-GciImjhY2Olug'; // replace this with your access token
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/dashasalmiiarova/ck7k9ds330l7j1ipggfhg7pob',
+center: [-73.964794, 40.775203], // starting position [lng, lat]
+zoom: 15
+ // starting zoom
+});
+// Map PopUp
+map.on('click', function(e) {
+  var features = map.queryRenderedFeatures(e.point, {
+    layers: ['map-nyc-new'] // replace this with the name of the layer
+  });
 
-var slide1 = document.getElementById('slick-slide00');
-var slide2 = document.getElementById('slick-slide01');
-var slide3 = document.getElementById('slick-slide02');
-var img1 = document.getElementById('slide1');
-var img2 = document.getElementById('slide2');
-var img3 = document.getElementById('slide3');
+  if (!features.length) {
+    return;
+  }
 
-function functionslide1() {
-      img1.classList.add('active');
-      // img1.classList.remove('img-slick1');
-      if(img2.classList == 'img-slick2 active'){
-        img2.classList.remove('active');
-      }
-      if(img3.classList == 'img-slick3 active'){
-        img3.classList.remove('active');
-      }
-}
-function functionslide1else(){
-  if(img1.classList == 'active'){
-    img1.classList.remove('active');
-    img1.classList.add('img-slick3');
-  }
-}
-function functionslide2() {
-      img2.classList.add('active');
-      img2.classList.remove('img-slick2');
-      if(img1.classList == 'img-slick1 active'){
-        img1.classList.remove('active');
-      }
-      if(img3.classList == 'img-slick3 active'){
-        img3.classList.remove('active');
-      }
-}
-function functionslide2else(){
-  if(img2.classList == 'active'){
-    img2.classList.remove('active');
-    img2.classList.add('img-slick2');
-  }
-}
-function functionslide3() {
-      img3.classList.add('active');
-      img3.classList.remove('img-slick3');
-      if(img1.classList == 'img-slick1 active'){
-        img1.classList.remove('active');
-      }
-      if(img2.classList == 'img-slick2 active'){
-        img2.classList.remove('active');
-      }
-}
-function functionslide3else(){
-  if(img3.classList == 'active'){
-    img3.classList.remove('active');
-    img3.classList.add('img-slick3');
-  }
-}
-$('.first-testimonials-carousel').on('afterChange', function(){
-  if(slide1.classList == 'slick-slide slick-current slick-active'){
-    functionslide1();
-  }
-  else{
-    functionslide1else();
-  }
-  if(slide2.classList == 'slick-slide slick-current slick-active'){
-    // alert('Im here');
-    functionslide2();
-  }
-  else{
-    functionslide2else();
-  }
-  if(slide3.classList == 'slick-slide slick-current slick-active'){
-    functionslide3();
-  }
-  else{
-    functionslide3else();
-  }
-})
+  var feature = features[0];
+
+  var popup = new mapboxgl.Popup({ offset: [0, -15] })
+    .setLngLat(feature.geometry.coordinates)
+    .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
+    .addTo(map);
+});
+// var scrollButton = document.getElementById('arrow-up');
+// scrollButton.addEventListener('click', function(){
+//   scrollTo({top: 0, behavior: 'smooth'});
+// })
+// $(window).load(function(){
+//     $("#arrow-up a").mPageScroll2id();
+// });
+// var slide1 = document.getElementById('slick-slide00');
+// var slide2 = document.getElementById('slick-slide01');
+// var slide3 = document.getElementById('slick-slide02');
+// var img1 = document.getElementById('slide1');
+// var img2 = document.getElementById('slide2');
+// var img3 = document.getElementById('slide3');
+
+// function functionslide1() {
+//       img1.classList.add('active');
+//       // img1.classList.remove('img-slick1');
+//       if(img2.classList == 'img-slick2 active'){
+//         img2.classList.remove('active');
+//       }
+//       if(img3.classList == 'img-slick3 active'){
+//         img3.classList.remove('active');
+//       }
+// }
+// function functionslide1else(){
+//   if(img1.classList == 'active'){
+//     img1.classList.remove('active');
+//     img1.classList.add('img-slick3');
+//   }
+// }
+// function functionslide2() {
+//       img2.classList.add('active');
+//       img2.classList.remove('img-slick2');
+//       if(img1.classList == 'img-slick1 active'){
+//         img1.classList.remove('active');
+//       }
+//       if(img3.classList == 'img-slick3 active'){
+//         img3.classList.remove('active');
+//       }
+// }
+// function functionslide2else(){
+//   if(img2.classList == 'active'){
+//     img2.classList.remove('active');
+//     img2.classList.add('img-slick2');
+//   }
+// }
+// function functionslide3() {
+//       img3.classList.add('active');
+//       img3.classList.remove('img-slick3');
+//       if(img1.classList == 'img-slick1 active'){
+//         img1.classList.remove('active');
+//       }
+//       if(img2.classList == 'img-slick2 active'){
+//         img2.classList.remove('active');
+//       }
+// }
+// function functionslide3else(){
+//   if(img3.classList == 'active'){
+//     img3.classList.remove('active');
+//     img3.classList.add('img-slick3');
+//   }
+// }
+// $('.first-testimonials-carousel').on('afterChange', function(){
+//   if(slide1.classList == 'slick-slide slick-current slick-active'){
+//     functionslide1();
+//   }
+//   else{
+//     functionslide1else();
+//   }
+//   if(slide2.classList == 'slick-slide slick-current slick-active'){
+//     // alert('Im here');
+//     functionslide2();
+//   }
+//   else{
+//     functionslide2else();
+//   }
+//   if(slide3.classList == 'slick-slide slick-current slick-active'){
+//     functionslide3();
+//   }
+//   else{
+//     functionslide3else();
+//   }
+// })
