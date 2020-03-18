@@ -143,7 +143,8 @@ var typed = new Typed('#typed', {
         }
         ]
     });
-    import {CountUp} from './countUp.js';
+import {CountUp} from './countUp.js';
+    // var counter = document.getElementById('.counter'),
     var waypoint = new Waypoint({
         element: document.getElementById('custom'),
         handler: function(direction) {
@@ -154,8 +155,11 @@ var typed = new Typed('#typed', {
                 trackColor: '#D4F8E5',
                 barColor: '#27DEBF',
                 scaleColor: false,
-                
+                responsive: true,
             });
+            // element1.addEventListener('resize', function(){
+            //   EasyPieChart.resize();
+            // })
             var element2 = document.querySelector('.chart2');
             new EasyPieChart(element2, {
                 size: 180,
@@ -294,51 +298,51 @@ var typed = new Typed('#typed', {
         }
       })
 // Isotope-portfolio
-var iso = new Isotope( '.grid', {
-itemSelector: '.grid-item',
-layoutMode: 'fitRows',
-fitRows: {
-    gutter: 40
-    }
-    });
-var filterFns = {
-    numberGreaterThan50: function( itemElem ) {
-      var number = itemElem.querySelector('.number').textContent;
-      return parseInt( number, 10 ) > 50;
-    },
-    ium: function( itemElem ) {
-      var name = itemElem.querySelector('.name').textContent;
-      return name.match( /ium$/ );
-    }
-  };
-  var filtersElem = document.querySelector('.portfolio-filer');
-  filtersElem.addEventListener( 'click', function( event ) {
-    // only work with buttons
-    if ( !matchesSelector( event.target, 'button' ) ) {
-      return;
-    }
-    var filterValue = event.target.getAttribute('data-filter');
-    // use matching filter function
-    filterValue = filterFns[ filterValue ] || filterValue;
-    iso.arrange({ filter: filterValue });
-  });
+// var iso = new Isotope( '.grid', {
+// itemSelector: '.grid-item',
+// layoutMode: 'fitRows',
+// fitRows: {
+//     gutter: '.gutter-sizer'
+//     }
+//     });
+// var filterFns = {
+//     numberGreaterThan50: function( itemElem ) {
+//       var number = itemElem.querySelector('.number').textContent;
+//       return parseInt( number, 10 ) > 50;
+//     },
+//     ium: function( itemElem ) {
+//       var name = itemElem.querySelector('.name').textContent;
+//       return name.match( /ium$/ );
+//     }
+//   };
+//   var filtersElem = document.querySelector('.portfolio-filer');
+//   filtersElem.addEventListener( 'click', function( event ) {
+//     // only work with buttons
+//     if ( !matchesSelector( event.target, 'button' ) ) {
+//       return;
+//     }
+//     var filterValue = event.target.getAttribute('data-filter');
+//     // use matching filter function
+//     filterValue = filterFns[ filterValue ] || filterValue;
+//     iso.arrange({ filter: filterValue });
+//   });
 
-  var buttonGroups = document.querySelectorAll('.portfolio-filer');
-  for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
-    var buttonGroup = buttonGroups[i];
-    radioButtonGroup( buttonGroup );
-  }
+//   var buttonGroups = document.querySelectorAll('.portfolio-filer');
+//   for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
+//     var buttonGroup = buttonGroups[i];
+//     radioButtonGroup( buttonGroup );
+//   }
   
-  function radioButtonGroup( buttonGroup ) {
-    buttonGroup.addEventListener( 'click', function( event ) {
-      // only work with buttons
-      if ( !matchesSelector( event.target, 'button' ) ) {
-        return;
-      }
-      buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
-      event.target.classList.add('is-checked');
-    });
-  }
+//   function radioButtonGroup( buttonGroup ) {
+//     buttonGroup.addEventListener( 'click', function( event ) {
+//       // only work with buttons
+//       if ( !matchesSelector( event.target, 'button' ) ) {
+//         return;
+//       }
+//       buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
+//       event.target.classList.add('is-checked');
+//     });
+//   }
 // Magnific Popup
 $('.grid-item').magnificPopup({
   delegate: 'a', // child items selector, by clicking on it popup will open
@@ -349,50 +353,53 @@ $('#headerVideoLink').magnificPopup({
     type:'inline',
     midClick: true
 })
-var portfolioButton = document.getElementById('portfolio-view-all');
-var panel = document.getElementById('portfolio-iso');
-var hide = document.getElementById('portfolio-h');
-portfolioButton.addEventListener('click', function(){
-  if(portfolioButton.value == "View All"){
-    portfolioButton.value = "View Less";
-    panel.classList.remove('portfolio-grid');
-    hide.classList.remove('port-hidd');
-  } else{
-    portfolioButton.value = "View All";
-    panel.classList.add('portfolio-grid');
-    hide.classList.add('port-hidd');
-  }
-})
-// slick carousel
-//   $('.first-testimonials-carousel').slick({
-//     dots: true,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 4000,
-//     arrows: false,
-//     infinite: false,
-//     fade: false,
-//     cssEase: 'linear',
-//     asNavFor: '.second-testimonials-carousel'
-// });
-// $('.second-testimonials-carousel').slick({
-//   dots: false,
-//   slidesToShow: 3, 
-//   slidesToScroll: 1,
-//   asNavFor: '.first-testimonials-carousel',
-//   infinite: true,
-//   arrows: false,
-//   centerMode: true,
-//   focusOnSelect: true
-// });
+//Portfolio View All-button add height to display all
+// var portfolioButton = document.getElementById('portfolio-view-all');
+// var panel = document.getElementById('portfolio-iso');
+// var hide = document.getElementById('portfolio-h');
+// portfolioButton.addEventListener('click', function(){
+//   if(portfolioButton.value == "View All"){
+//     portfolioButton.value = "View Less";
+//     panel.classList.remove('portfolio-grid');
+//     hide.classList.remove('port-hidd');
+//   } else{
+//     portfolioButton.value = "View All";
+//     panel.classList.add('portfolio-grid');
+//     hide.classList.add('port-hidd');
+//   }
+// })
+//Slick Carousel
 $('.first-testimonials-carousel').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
+  speed: 600,
   dots: true,
   arrows: false,
-  fade: true,
-  asNavFor: '.second-testimonials-carousel'
+  infinite: true,
+  asNavFor: '.second-testimonials-carousel',
+  mobileFirst: true,
+  responsive:[
+    {
+       breakpoint: 315,
+        setttings:{
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          speed: 400,
+          infinite: true,
+          dots: true
+      }
+    },
+    {
+      breakpoint: 426,
+       setttings:{
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         speed: 400,
+         infinite: true,
+         dots: true
+     }
+   },
+  ]
 });
 $('.second-testimonials-carousel').slick({
   slidesToShow: 3,
@@ -401,8 +408,101 @@ $('.second-testimonials-carousel').slick({
   arrows: false,
   centerMode: true,
   centerPadding: '0px',
-  focusOnSelect: true
+  focusOnSelect: true,
+  mobileFirst: true,
+  responsive:[
+    {
+       breakpoint: 315,
+        setttings:{
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          speed: 400,
+          infinite: true,
+          dots: true,
+          focusOnSelect: false,
+      }
+    }
+  ]
 });
+$('.portfolio-carousel').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  speed: 400,
+  infinite: true,
+  dots: true,
+  centerMode: true,
+  centerPadding: '0px',
+  focusOnSelect: false,
+  mobileFirst: true,
+  responsive:[
+    {
+      breakpoint: 315,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 400,
+        infinite: true,
+        dots: true,
+        centerMode: true,
+        centerPadding: '0px',
+        focusOnSelect: false,
+      }
+    },
+    {
+      breakpoint: 426,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        speed: 400,
+        infinite: true,
+        dots: true,
+        centerMode: true,
+        centerPadding: '0px',
+        focusOnSelect: false,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        speed: 400,
+        infinite: true,
+        dots: true,
+        centerMode: true,
+        centerPadding: null,
+        focusOnSelect: true,
+      }
+    },
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        speed: 400,
+        infinite: true,
+        dots: true,
+        centerMode: false,
+        centerPadding: '10px',
+        focusOnSelect: false,
+      }
+    },
+    {
+      breakpoint: 1442,
+      settings: {
+        slidesToShow: 3,
+          slidesToScroll: 1,
+          speed: 400,
+          infinite: true,
+          dots: true,
+          centerMode: true,
+          centerPadding: '10px',
+          focusOnSelect: true,
+      }
+    },
+  ]
+})
 // Map
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGFzaGFzYWxtaWlhcm92YSIsImEiOiJjazdrOXFuaTUwMnV3M3RvZG9tejVzcml3In0.vDTPEyo5-GciImjhY2Olug'; // replace this with your access token
 var map = new mapboxgl.Map({
@@ -429,86 +529,37 @@ map.on('click', function(e) {
     .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
     .addTo(map);
 });
-// var scrollButton = document.getElementById('arrow-up');
-// scrollButton.addEventListener('click', function(){
-//   scrollTo({top: 0, behavior: 'smooth'});
-// })
-// $(window).load(function(){
-//     $("#arrow-up a").mPageScroll2id();
-// });
-// var slide1 = document.getElementById('slick-slide00');
-// var slide2 = document.getElementById('slick-slide01');
-// var slide3 = document.getElementById('slick-slide02');
-// var img1 = document.getElementById('slide1');
-// var img2 = document.getElementById('slide2');
-// var img3 = document.getElementById('slide3');
 
-// function functionslide1() {
-//       img1.classList.add('active');
-//       // img1.classList.remove('img-slick1');
-//       if(img2.classList == 'img-slick2 active'){
-//         img2.classList.remove('active');
-//       }
-//       if(img3.classList == 'img-slick3 active'){
-//         img3.classList.remove('active');
-//       }
-// }
-// function functionslide1else(){
-//   if(img1.classList == 'active'){
-//     img1.classList.remove('active');
-//     img1.classList.add('img-slick3');
-//   }
-// }
-// function functionslide2() {
-//       img2.classList.add('active');
-//       img2.classList.remove('img-slick2');
-//       if(img1.classList == 'img-slick1 active'){
-//         img1.classList.remove('active');
-//       }
-//       if(img3.classList == 'img-slick3 active'){
-//         img3.classList.remove('active');
-//       }
-// }
-// function functionslide2else(){
-//   if(img2.classList == 'active'){
-//     img2.classList.remove('active');
-//     img2.classList.add('img-slick2');
-//   }
-// }
-// function functionslide3() {
-//       img3.classList.add('active');
-//       img3.classList.remove('img-slick3');
-//       if(img1.classList == 'img-slick1 active'){
-//         img1.classList.remove('active');
-//       }
-//       if(img2.classList == 'img-slick2 active'){
-//         img2.classList.remove('active');
-//       }
-// }
-// function functionslide3else(){
-//   if(img3.classList == 'active'){
-//     img3.classList.remove('active');
-//     img3.classList.add('img-slick3');
-//   }
-// }
-// $('.first-testimonials-carousel').on('afterChange', function(){
-//   if(slide1.classList == 'slick-slide slick-current slick-active'){
-//     functionslide1();
-//   }
-//   else{
-//     functionslide1else();
-//   }
-//   if(slide2.classList == 'slick-slide slick-current slick-active'){
-//     // alert('Im here');
-//     functionslide2();
-//   }
-//   else{
-//     functionslide2else();
-//   }
-//   if(slide3.classList == 'slick-slide slick-current slick-active'){
-//     functionslide3();
-//   }
-//   else{
-//     functionslide3else();
-//   }
-// })
+
+(function($){
+  $(window).load(function(){
+  $("#arrow-up a").mPageScroll2id();
+  });
+  })(jQuery);
+
+(function($){
+  $(window).load(function(){
+  $("#home a").mPageScroll2id();
+  });
+  })(jQuery);
+// Mobile Menu
+var burgerButton = document.getElementsByClassName("toggle-button");
+var p;
+for(p = 0; p < burgerButton.length; p++){
+    burgerButton[p].onclick = function(){
+        // console.log('button clicked');
+        var menuha = document.getElementById('nav-menu');
+        if(menuha.style.maxHeight){
+            menuha.style.maxHeight = null;
+        }
+        else{
+            menuha.style.maxHeight = menuha.scrollHeight + "px";
+        }
+        if(menuha.style.marginTop){
+            menuha.style.marginTop = null;
+        }
+        else{
+            menuha.style.marginTop = 30 + "px";
+        }
+    }
+}

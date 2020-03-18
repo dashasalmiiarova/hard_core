@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
     <title>HardCore</title>
 </head>
 <body>
@@ -46,14 +46,27 @@
                 <li class="menu-item">
                     <a href="" class="menu-item-link">Resorces</a></li>
             </ul>
-        </div>
+        </div>   
     </header>
+    <div class="mobile-menu">
+        <div class="top-menu">
+           <a href="#"><img class="mobile-logo" src="img/logo.svg" alt="" ></a> 
+           <div class="toggle-button" id="toggle" href="#"><img class="mobile-burger-img"  src="img/menu (1).svg" alt=""></div>
+        </div>
+        <ul id="nav-menu" class="menu-mobile-block">
+            <li><a class="menu-item-link menu-active" href="#home">Home</a> </li>
+            <li><a class="menu-item-link" href="#aboutMe">About Us</a> </li>
+            <li><a class="menu-item-link" href="#services">Services</a> </li>
+            <li><a href="#" class="menu-item-link">News</a> </li>
+            <li><a class="menu-item-link" href="#">Resorces</a> </li>
+        </ul>
+    </div>
     <div  class="contant">
         <div class="slogan">
             <div class="slogan-inside container2">
                 <div class="slogan-inside-info">
                     <div class="typed-slogan" id="typed-strings">
-                        <h1 class="slogan-info-h1">Sharing Vitality <br> <span class="throught"> Through</span>  <span id="typed"></span> </h1>
+                        <h1 class="slogan-info-h1">Sharing Vitality <br> <span class="throught"> Through</span> <br class="slogan-br-dn">  <span id="typed"></span> </h1>
                         <p class="slogan-p">clean design and advanced digital solutions</p>
                         <div class="slogan-buttons">
                             <a href="#" class="slogan-button-fill">Explore More</a>
@@ -94,66 +107,72 @@
                 </div>
                 <div class="about-info">
                     <h2 class="h2-custom" id="custom">
-                        About me
+                        About us
                     </h2>
                     <div class="line-h2-custom"></div>
+                    <div class="about-img-media">
+                        <img src="img/about-img.jpg" alt="">
+                    </div>
                     <h4 class="custom-title-h4" >
                         Why hire us for your next project?
                     </h4>
                     <p class="custom-p">
                         We are Creative Director and UI/UX Designer from New York, working in web development and print media. We enjoy turning complex problems into simple, beautiful and intuitive designs. <br> <br> Our job is to build your website so that it is functional and user-friendly but at the same time attractive.
                     </p>
-                    <a class="about-button" href="#">Download CV</a>
+                    <div class="about-button-div">
+                        <a class="about-button" href="#">Download CV</a>
+                    </div>
+                    
                 </div>
             </div>
-            <div class="about-counter">
-                <div class="counter-box">
-                    <div class="chart1 chart" data-percent="50">
-                        <div class="chart-info">
-                            <div class="chart-info-center" id="block1">
-                                <div class="prcent-counter tak" id="count1">50%</div>
-                                <div class="percent-info tak">web design</div> 
-                            </div>
+            <div class="about-counter" id="counter">
+                <div class="counter-box-row1">
+                    <div class="counter-box">
+                        <div class="chart1 chart" data-percent="50">
+                         <div class="chart-info">
+                             <div class="chart-info-center" id="block1">
+                                    <div class="prcent-counter tak" id="count1">50%</div>
+                                    <div class="percent-info tak">web design</div> 
+                                </div>
                             
                         </div>
                     </div>
-                </div>
-                <div class="counter-box">
-                    <div class="chart2 chart" data-percent="75">
+                    </div>
+                    <div class="counter-box">
+                        <div class="chart2 chart" data-percent="75">
                         <div class="chart-info">
                             <div class="chart-info-center">
                                     <div class="prcent-counter tak" id="count2">75%</div>
-                                    <div class="percent-info tak">web design</div>
+                                    <div class="percent-info tak">development</div>
                             </div>
-                            
+                            </div>
                         </div>
+                    </div>
+                </div>
+                <div class="counter-box-row2">
+                    <div class="counter-box">
+                        <div class="chart3 chart" data-percent="20">
+                            <div class="chart-info">
+                                <div class="chart-info-center">
+                                    <div class="prcent-counter tak" id="count3">20%</div>
+                                    <div class="percent-info tak">Development</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="counter-box">
+                        <div class="chart4 chart" data-percent="50">
+                            <div class="chart-info">
+                                <div class="chart-info-center">
+                                    <div class="prcent-counter tak" id="count4">50%</div>
+                                    <div class="percent-info tak">User experience</div>
+                                </div>
+                            </div>
                         
                     </div>
                 </div>
-                <div class="counter-box">
-                    <div class="chart3 chart" data-percent="20">
-                        <div class="chart-info">
-                            <div class="chart-info-center">
-                                <div class="prcent-counter tak" id="count3">20%</div>
-                                <div class="percent-info tak">Development</div>
-                            </div>
-                            
-                        </div>
-                        
-                    </div>
                 </div>
-                <div class="counter-box">
-                    <div class="chart4 chart" data-percent="50">
-                        <div class="chart-info">
-                            <div class="chart-info-center">
-                                <div class="prcent-counter tak" id="count4">50%</div>
-                                <div class="percent-info tak">User experience</div>
-                            </div>
-                           
-                        </div>
-                        
-                    </div>
-                </div>
+                
             </div>
 
         </div>
@@ -181,7 +200,7 @@
                         <p class="services-info-p">Lorem ipsum dolor sit amet, Stet clita kasd lorem ipsum dolor sit amet. sed diam eirmod tempor dolore.</p>
                         <a id="block3" class="services-info-button" href="#">Know More<i class="fas fa-angle-double-right"></i></a>
                     </div>
-                    <div class="services-counter block-order1">
+                    <div class="services-counter block-order3 block-order2">
                         <div class="services-counter-count" id="countr1">
                             95%
                         </div>
@@ -205,7 +224,7 @@
                         <p class="services-info-p">Lorem ipsum dolor sit amet, Stet clita kasd lorem ipsum dolor sit amet. sed diam eirmod tempor dolore.</p>
                         <a class="services-info-button" id="block4" href="#">Know More<i class="fas fa-angle-double-right"></i></a>
                     </div>
-                    <div class="services-counter block-order1">
+                    <div class="services-counter block-order3 block-order1">
                         <div class="services-counter-count" id="countr2">
                             85%
                         </div>
@@ -229,7 +248,7 @@
                         <p class="services-info-p">Lorem ipsum dolor sit amet, Stet clita kasd lorem ipsum dolor sit amet. sed diam eirmod tempor dolore.</p>
                         <a id="block4" class="services-info-button" href="#">Know More<i class="fas fa-angle-double-right"></i></a>
                     </div>
-                    <div class="services-counter block-order2">
+                    <div class="services-counter block-order3 block-order2">
                         <div class="services-counter-count" id="countr3">
                             70%
                         </div>
@@ -253,8 +272,8 @@
                         <p class="services-info-p">Lorem ipsum dolor sit amet, Stet clita kasd lorem ipsum dolor sit amet. sed diam eirmod tempor dolore.</p>
                         <a class="services-info-button" href="#">Know More<i class="fas fa-angle-double-right"></i></a>
                     </div>
-                    <div class="services-counter block-order1">
-                        <div class="services-counter-count" >
+                    <div class="services-counter block-order3 block-order1">
+                        <div class="services-counter-count" id="countr4">
                             50%
                         </div>
                         <div class="progress-bar-width">
@@ -278,14 +297,14 @@
                     <div class="h3-services-line portfolio-line2"></div>
                 </div>
             </div>
-            <div class="portfolio-filer">
+            <!-- <div class="portfolio-filer">
                 <button class="portfolio-filter-button is-checked" data-filter="*">All</button>
                 <button class="portfolio-filter-button" data-filter=".web-design">Web Design</button>
                 <button class="portfolio-filter-button" data-filter=".mobile-app">Mobile App</button>
                 <button class="portfolio-filter-button" data-filter=".ux-ui">UX/UI</button>
-            </div>
-            <div class="portfolio-hidden" >
-                <div class="portfolio-grid grid" id="portfolio-iso" data-ignore-hash="true">
+            </div> -->
+            <!-- <div class="portfolio-grid grid" id="portfolio-iso">
+                    <div class="gutter-sizer"></div>
                     <div class="grid-item web-design">
                     <div class="portfolio-bg-img pw1">
                         <div class="portfolio-bg-color">
@@ -556,11 +575,30 @@
                         </div>
                         </div> 
                     </div>
-                </div>
-
+            </div> -->
+            <div class="portfolio-carousel">
+                    <div class="portfolio-slide">
+                        <img src="img/pm1.jpg" alt="" class="portfolio-slider-img">
+                    </div>
+                    <div class="portfolio-slide">
+                        <img src="img/pw1.jpg" alt="" class="portfolio-slider-img">
+                    </div>
+                    <div class="portfolio-slide">
+                        <img src="img/pu1.png" alt="" class="portfolio-slider-img">
+                    </div>
+                    <div class="portfolio-slide">
+                        <img src="img/pm1.png" alt="" class="portfolio-slider-img">
+                    </div>
+                    <div class="portfolio-slide">
+                        <img src="img/pw2.jpg" alt="" class="portfolio-slider-img">
+                    </div>
+                    <div class="portfolio-slide">
+                        <img src="img/pu2.png" alt="" class="portfolio-slider-img">
+                    </div>
+            </div>
+            <div class="portfolio-slider-button">
                 <input type="button" class="portfolio-view-all-b" id="portfolio-view-all" value="View All"></input>
             </div>
-            
         </div>
         <div class="testimonials container2">
             <div class="services-title">
@@ -675,10 +713,12 @@
             </div>
             <div class="blog-items">
                 <div class="blog-item1">
-                    <div class="item-img">
+                    <!-- <div class="item-img">
                         <img class="img-blog" src="img/blog1.png" alt="">
-                    </div>
+                    </div> -->
+                    <img class="img-blog" src="img/blog1.png" alt="">
                     <div class="item-info">
+                        
                         <h4 class="item-h4">26th October</h4>
                         <div class="p-blog">
                             <p class="item-p" id="blog-p-1"> enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
@@ -695,10 +735,12 @@
                     </div>
                 </div>
                 <div class="blog-item1">
-                    <div class="item-img">
+                    <!-- <div class="item-img">
                         <img class="img-blog" src="img/blog2.png" alt="">
-                    </div>
+                    </div> -->
+                    <img class="img-blog" src="img/blog2.png" alt="">
                     <div class="item-info">
+                        
                         <h4 class="item-h4">26th October</h4>
                         <div class="p-blog">
                            <p class="item-p" id="blog-p-2">I enjoy turning complex problems into simple, beautiful and intuitive designs.</p> 
@@ -715,10 +757,12 @@
                     </div>
                 </div>
                 <div class="blog-item1">
-                    <div class="item-img">
+                    <!-- <div class="item-img">
                         <img class="img-blog" src="img/blog3.png" alt="">
-                    </div>
+                    </div> -->
+                    <img class="img-blog" src="img/blog3.png" alt="">
                     <div class="item-info">
+                        
                         <h4 class="item-h4">26th October</h4>
                         <div class="p-blog">
                             <p class="item-p" id="blog-p-3">I enjoy turning complex problems into simple, beautiful and intuitive designs. </p>
@@ -763,8 +807,8 @@
                     </div>
                     <div class="form-line">
                         <input class="input-text" type="tel" name="phone" placeholder="Phone">
-                        <select class="input-text select-text"  name="budget" id="">
-                            <option value="" disabled selected>Budget</option>
+                        <select class="input-text select-text"  name="budget" id="" style="font-family:Josefin Sans, FontAwesome" >
+                            <option value="" disabled selected>Budget <i class="fas fa-angle-down"></i></option>
                             <option value="500$">500$</option>
                             <option value="1000$">1000$</option>
                             <option value="1500$">1500$</option>
@@ -788,7 +832,7 @@
         </div>
     </div>
 
-    <footer class="container2">
+    <footer class="container4">
         <div class="footer-main-info">
             <div class="footer-left">
                 <div class="footer-logo">
@@ -800,10 +844,10 @@
             </div>
             <div class="footer-right">
                 <div class="footer-info">
-                    <p class="item-p-bold footer-p">We are digital designer living in United States. <br> Apart from eating burger</p>
+                    <p class="item-p-bold footer-p">We are digital designer living in United States. <br class="footer-br"> Apart from eating burger</p>
                 </div>
                 <div class="footer-links">
-                    <div class="sent-mail">
+                    <div class="sent-mail limk">
                         <div class="footer-title">
                             <h4 class="footer-title">sent mail</h4>
                         </div>
@@ -811,13 +855,13 @@
                             <a class="services-info-p footer-link-small" href="mailto:dashasalmiiarova@gmail.com">info@portfolio.com</a>
                         </div>
                     </div>
-                    <div class="calls">
+                    <div class="calls limk">
                         <div class="footer-title">
                             <h4 class="footer-title">make call</h4>
                         </div>
                         <a class="services-info-p footer-link-small" href="tel:1234567890">+123 456 7890</a>
                     </div>
-                    <div class="get-in-touch">
+                    <div class="get-in-touch limk">
                         <div class="footer-title">
                             <h4 class="footer-title">get in touch</h4>
                         </div>
@@ -837,8 +881,13 @@
             <img data-depth="0.3"  src="img/slogan-parallax/Ellipse 6.svg" alt="" class="footer-parallax-5">
         </div>
     </footer>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+     <script src="js/jquery.malihu.PageScroll2id.min.js"></script>
     <script src="js/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
@@ -848,9 +897,10 @@
     <script src="js/progressbar.js"></script>
     <script src="js/isotope.pkgd.js"></script>
     <script src="js/layout-modes/fit-rows.js"></script>
+    
     <script src="js/jquery.magnific-popup.js"></script>
     <script src="js/slick.js"></script>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js'></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
     <!-- <script src='https://api.mapbox.com/uploads/pk.eyJ1IjoiZGFzaGFzYWxtaWlhcm92YSIsImEiOiJjazdrOXFuaTUwMnV3M3RvZG9tejVzcml3In0.vDTPEyo5-GciImjhY2Olug'></script> -->
     <script type="module" src="js/app.js"></script>
 </body>
