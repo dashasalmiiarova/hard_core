@@ -683,9 +683,10 @@ h1{
     margin-bottom: 30px;
 } */
 .portfolio-view-all-b{
+    width: 110px;
     display: flex;
     /* justify-content: center; */
-    margin: auto;
+    margin: auto !important;
     border: none;
     font-size: 20px;
     font-weight: 600;
@@ -697,6 +698,16 @@ h1{
     transition: all 0.5s ease-in-out;
     margin-bottom: 30px;
     margin-top: 50px;
+    text-decoration: none !important;
+    /* outline: none; */
+}
+.blog-button{
+    width: 80px;
+    margin: auto;
+}
+.button-form-submit{
+    width: 150px;
+    margin: auto;
 }
 .portfolio-view-all-b:hover{
     background-color: white;
@@ -1067,6 +1078,22 @@ select:focus,
     left: 57%!important;
     top: -246px!important;
 }
+.containerBlog{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.item-infoBlog{
+    order: 1;
+    padding: 15px 25px;
+    width: 100%;
+    /* height: 197px; */
+    z-index: 1500;
+    /* margin: auto; */
+}
+/* .img-blog-2{
+    
+} */
 /* Mobile devices */
 @media screen and (min-width: 315px) and (max-width: 425px){
     .mobile-menu{
@@ -1583,6 +1610,7 @@ select:focus,
         padding: 10px;
         /* margin: 50px auto 10px; */
         margin: 0;
+        text-decoration: none;
     }
     .testimonials{
         padding-top: 80px;
@@ -1975,9 +2003,9 @@ select:focus,
     .footer-main-info{
        display: block;
     }
-    .footer-links{
-        /* flex-direction: column; */
-    }
+    /* .footer-links{
+        flex-direction: column;
+    } */
     footer .services-info-p{
         margin-top: 15px;
         margin-bottom: 15px;
@@ -2078,10 +2106,10 @@ select:focus,
     .container3{
         width: 90%;
     }
-    .about-info-block{
-        /* display: flex; */
-        /* flex-direction: column; */
-    }
+    /* .about-info-block{
+        display: flex;
+        flex-direction: column;
+    } */
     .h2-custom{
         width: 110px;
         margin: auto;
@@ -2254,9 +2282,9 @@ select:focus,
         padding-top: 50px;
         background-image:unset;
     }
-    form{
-        /* width: 100%; */
-    }
+    /* form{
+        width: 100%;
+    } */
     /* .form-line{
         flex-direction: column;
     } */
@@ -2286,9 +2314,9 @@ select:focus,
         justify-content: space-between;
         /* flex-direction: column; */
     }
-    .footer-links{
-        /* flex-direction: column; */
-    }
+    /* .footer-links{
+        flex-direction: column;
+    } */
     footer .services-info-p{
         margin-top: 15px;
         margin-bottom: 15px;
