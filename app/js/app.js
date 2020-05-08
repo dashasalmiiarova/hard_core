@@ -343,6 +343,8 @@ import {CountUp} from './countUp.js';
 //       event.target.classList.add('is-checked');
 //     });
 //   }
+
+
 // Magnific Popup
 $('.grid-item').magnificPopup({
   delegate: 'a', // child items selector, by clicking on it popup will open
@@ -368,6 +370,7 @@ $('#headerVideoLink').magnificPopup({
 //     hide.classList.add('port-hidd');
 //   }
 // })
+
 //Slick Carousel
 $('.first-testimonials-carousel').slick({
   slidesToShow: 1,

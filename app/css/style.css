@@ -748,6 +748,7 @@ h1{
     padding-top: 30px;
     padding-bottom: 10px;
 }
+/* div */
 .slide-1-img{
     height: 100px;
     padding-top: 30px;
@@ -766,6 +767,7 @@ h1{
     border-radius: 50%;
 
 }
+/* img */
 .img-slick1{
     border: 2px solid #27DEBF;
     border-radius: 80px;
