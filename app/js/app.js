@@ -350,7 +350,7 @@ $('.grid-item').magnificPopup({
   delegate: 'a', // child items selector, by clicking on it popup will open
   type: 'image'
   // other options
-  });
+});
 $('#headerVideoLink').magnificPopup({
     type:'inline',
     midClick: true
@@ -545,6 +545,7 @@ map.on('click', function(e) {
   $("#home a").mPageScroll2id();
   });
   })(jQuery);
+  
 // Mobile Menu
 var burgerButton = document.getElementsByClassName("toggle-button");
 var p;
